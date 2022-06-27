@@ -8,6 +8,6 @@ for i in l:
     if i in k:
         g.append(i)
 '''for i in k:
-    if i in l:
+    if i not in l:
         g.append(i)'''
 print(len(g))
