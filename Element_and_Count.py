@@ -6,4 +6,3 @@ for i in l:
         r.append(i)
 for i in r:
     print(i,l.count(i),end=' ')
-    
