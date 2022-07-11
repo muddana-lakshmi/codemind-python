@@ -13,6 +13,6 @@ else:
     u=0
     for i in r:
         u=u+i
-    u=(u/len(r))
+    u=u/len(r)
     h="{:.2f}".format(u)
     print(h)
