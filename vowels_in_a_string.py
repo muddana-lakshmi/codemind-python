@@ -1,7 +1,7 @@
-n=input()
-k=input()
-if k in n:
+s=input()
+r=input()
+if r in s:
     print("True")
-    print(n.index(k))
+    print(s.index(r))
 else:
     print("False")
