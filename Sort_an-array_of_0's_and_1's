@@ -1,0 +1,10 @@
+n=int(input())
+l=list(map(int,input().split()))
+z=[]
+o=[]
+for i in l:
+    if i==0:
+        z.append(i)
+    else:
+        o.append(i)
+print(*(z+o))
