@@ -1,0 +1,12 @@
+n=input()
+m=[]
+t='aeiou'
+c=0
+for i in n:
+    if i in t:
+        c+=1
+    else:
+        m.append(c)
+        c=0
+m.append(c)
+print(max(m))
