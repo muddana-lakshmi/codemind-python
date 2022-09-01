@@ -1,0 +1,6 @@
+n=input()
+n=list(n)
+if n.count("U")==n.count("D") and n.count("L")==n.count("R"):
+    print("True")
+else:
+    print("False")
