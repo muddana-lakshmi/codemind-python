@@ -1,0 +1,9 @@
+n=input()
+m=[]
+for i in n:
+    i=int(i)
+    if i%2==1:
+        m.append(i*i)
+for i in m:
+    print(i,end='')
+        
