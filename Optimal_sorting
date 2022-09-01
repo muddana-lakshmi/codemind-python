@@ -1,0 +1,40 @@
+def partition(a,l,n):
+    p=n
+    i=l
+    for j in range(l,p):
+        if(a[j]<a[p]):
+            a[j],a[i]=a[i],a[j]
+            i+=1
+    a[i],a[p]=a[p],a[i]
+    return i
+def quick_sort(a,l,n):
+    p=0
+    if(l<n):
+        p=partition(a,l,n)
+        quick_sort(a,l,p-1)
+        quick_sort(a,p+1,n)
+        
+t=int(input())
+for k in range(t):
+    n=int(input())
+    b=[]
+    c=[]
+    d=[]
+    a=list(map(int,input().split()))
+    for i in range(len(a)):
+        b.append(a[i])
+        b.append(i)
+    quick_sort(a,0,n-1)
+    for i in range(len(a)):
+        c.append(a[i])
+        c.append(i)
+    z=0
+    for i in range(2*n):
+        if i%2==0:
+            if b[i]!=c[i]:
+                z+=1
+                d.append(c[i])
+    if z==0:
+        print(z)
+    else:
+        print(d[len(d)-1]-d[0])
