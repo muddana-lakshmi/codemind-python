@@ -1,0 +1,18 @@
+n=input()
+l=list(n)
+k=[]
+v=[]
+for i in range(len(l)):
+    if l[i] in 'abcdefghijklmnopqrstuvwxyz':
+        v.append(l[i])
+        k.append(i)
+v=v[::-1]
+o=[]
+g=0
+for i in range(len(l)):
+    if i in k:
+        o.append(v[g])
+        g+=1
+    else:
+        o.append(l[i])
+print(''.join(o))
