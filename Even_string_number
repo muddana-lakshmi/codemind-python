@@ -1,0 +1,33 @@
+n=input()
+m=[]
+for i in n:
+    if i in '1234567890':
+        m.append(i)
+m.sort()
+c=0
+for i in m:
+    if int(i)%2==0:
+        c+=1
+if c==0:
+    print(-1)
+else:
+    m.reverse()
+    m=set(m)
+    m=list(m)
+    m.sort()
+    m.reverse()
+    r=''.join(m)
+    #print(r)
+    if int(r)%2==0:
+        print(r)
+    else:
+        m=set(m)
+        m=list(m)
+        m.sort()
+        m.reverse()
+        for i in range(len(m)):
+            if int(m[i])%2==0:
+                k=i
+        m[len(m)-1],m[k]=m[k],m[len(m)-1]
+        print(''.join(m))
+    
