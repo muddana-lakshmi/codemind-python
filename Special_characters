@@ -1,0 +1,58 @@
+n=input()
+t='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+c=0
+for i in n:
+    if i not in t:
+        c+=1
+if c%2==0:
+    k='0123456789'
+    e=[]
+    o=[]
+    for i in n:
+        if i in k:
+            i=int(i)
+            if i%2==0:
+                e.append(i)
+            else:
+                o.append(i)
+    k=[]
+    if len(e)<len(o):
+        for i in range(len(e)):
+            k.append(e[i])
+            k.append(o[i])
+        for i in range(len(e),len(o)):
+            k.append(o[i])
+    else:
+        for i in range(len(o)):
+            k.append(e[i])
+            k.append(o[i])
+        for i in range(len(o),len(e)):
+            k.append(e[i])
+    for i in k:
+        print(i,end='')
+else:
+    k='0123456789'
+    e=[]
+    o=[]
+    for i in n:
+        if i in k:
+            i=int(i)
+            if i%2==0:
+                e.append(i)
+            else:
+                o.append(i)
+    k=[]
+    if len(e)<len(o):
+        for i in range(len(e)):
+            k.append(o[i])
+            k.append(e[i])
+        for i in range(len(e),len(o)):
+            k.append(o[i])
+    else:
+        for i in range(len(o)):
+            k.append(o[i])
+            k.append(e[i])
+        for i in range(len(o),len(e)):
+            k.append(e[i])
+    for i in k:
+        print(i,end='')
