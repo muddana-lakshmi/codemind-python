@@ -1,0 +1,20 @@
+n=input()
+n=list(n)
+k=n
+n=set(n)
+l=[]
+n=list(n)
+for i in n:
+    l.append(k.count(i))
+s=max(l)
+for i in l:
+    if i!=s:
+        l.remove(i)
+        break
+for i in range(len(l)):
+    if i!=len(l)-1:
+        if l[i]!=l[i+1]:
+            print("Not Valid")
+            break
+else:
+    print("Valid String")
