@@ -1,0 +1,15 @@
+t=int(input())
+for k in range(t):
+    n=int(input())
+    l=list(map(int,input().split()))
+    s=0
+    m=[]
+    for i in range(n):
+        m.append(l[i])
+    for i in range(n):
+        s=0
+        for j in range(i,n):
+            s=s+l[j]
+            m.append(s)
+    print(max(m))
+        
