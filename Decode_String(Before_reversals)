@@ -1,0 +1,16 @@
+t=int(input())
+for q in range(t):
+    n,k=map(int,input().split())
+    s=input()
+    s=list(s)
+    m=k
+    while(k>0):
+        z=[]
+        for i in range(m):
+            z.append(s[i])
+        z.reverse()
+        for i in range(m):
+            s[i]=z[i]
+        m=m-1
+        k=k-1
+    print(''.join(s))
